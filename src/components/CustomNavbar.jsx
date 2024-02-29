@@ -8,7 +8,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "../components/Home";
 import About from "../components/About";
 import Register from "../components/Register";
-import Error from "../components/Error"; // Añadido import para el componente Error
+import Error from "../components/Error";
+import Login from "../components/Login";
 
 function CustomNavbar() {
   return (
@@ -37,18 +38,11 @@ function CustomNavbar() {
               <Nav.Link as={Link} to="/register">
                 Register
               </Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
+              <NavDropdown title="Users" id="basic-nav-dropdown">
+                <NavDropdown.Item as={Link} to="/login">
+                  Login
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/register">Register</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
@@ -57,6 +51,7 @@ function CustomNavbar() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<Error />} />
       </Routes>
