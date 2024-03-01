@@ -16,7 +16,7 @@ function CustomNavbar() {
     <Router>
       <Navbar expand="lg" className="bg-body-tertiary" sticky="top">
         <Container>
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand as={Link} to="proyecto-final-react/">
             <img
               alt=""
               src="src/assets/borderlands-logo.svg"
@@ -29,30 +29,30 @@ function CustomNavbar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link as={Link} to="/">
+              <Nav.Link as={Link} to="proyecto-final-react/">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/about">
+              <Nav.Link as={Link} to="proyecto-final-react/about">
                 About
               </Nav.Link>
-              <Nav.Link as={Link} to="/register">
+              <Nav.Link as={Link} to="proyecto-final-react/register">
                 Register
               </Nav.Link>
               <NavDropdown title="Users" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="/login">
+                <NavDropdown.Item as={Link} to="proyecto-final-react/login">
                   Login
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/register">Register</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="proyecto-final-react/register">Register</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="proyecto-final-react/" element={<Home />} />
+        <Route path="proyecto-final-react/about" element={<About />} />
+        <Route path="proyecto-final-react/login" element={<Login />} />
+        <Route path="proyecto-final-react/register" element={<Register />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
