@@ -19,7 +19,7 @@ function CustomNavbar() {
           <Navbar.Brand as={Link} to="proyecto-final-react/">
             <img
               alt=""
-              src="src/assets/borderlands-logo.svg"
+              src="./src/assets/borderlands-logo.svg"
               width="30"
               height="30"
               className="d-inline-block align-top"
