@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Swal from "sweetalert2";
 
-function Register() {
+const Register = () => {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -24,7 +24,7 @@ function Register() {
     try {
       // Verificar si ya existe un usuario con el mismo nombre
       const checkUserResponse = await fetch(
-        `http://localhost:3001/user?username=${formData.username}`
+        `https://my-json-server.typicode.com/pikatostes/proyecto-final-react/user?username=${formData.username}`
       );
       const existingUser = await checkUserResponse.json();
 
@@ -115,6 +115,6 @@ function Register() {
       </div>
     </Container>
   );
-}
+};
 
 export default Register;
