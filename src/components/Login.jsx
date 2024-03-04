@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Swal from 'sweetalert2';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [formData, setFormData] = useState({
-    username: '',
-    password: '',
+    username: "",
+    password: "",
   });
 
   const handleChange = (e) => {
@@ -21,49 +21,74 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
-      const response = await fetch('http://localhost:3001/user', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
+      const response = await fetch(
+        `http://localhost:3001/user?username=${formData.username}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+  
       if (response.ok) {
-        // Lógica para manejar el éxito del inicio de sesión
-        console.log('Inicio de sesión exitoso.');
-        Swal.fire({
-          title: 'Success',
-          text: 'Inicio de sesión exitoso.',
-          icon: 'success',
-          confirmButtonText: 'OK',
-        });
+        const users = await response.json();
+  
+        if (users.length > 0) {
+          // User found, proceed with login
+          const userData = users[0];
+  
+          // Store the user data in sessionStorage
+          sessionStorage.setItem("user", JSON.stringify(userData));
+  
+          Swal.fire({
+            title: "Success",
+            text: "Inicio de sesión exitoso.",
+            icon: "success",
+            confirmButtonText: "OK",
+          }).then(() => {
+            // Redirigir a la página principal
+            window.location.href = "/";
+          });
+        } else {
+          // No user found with the provided username
+          console.error("Inicio de sesión fallido. Usuario no encontrado.");
+          Swal.fire({
+            title: "Error",
+            text: "Inicio de sesión fallido. Usuario no encontrado.",
+            icon: "error",
+            confirmButtonText: "OK",
+          });
+        }
       } else {
-        // Lógica para manejar el fallo del inicio de sesión
-        console.error('Inicio de sesión fallido.');
+        // Handle other HTTP status codes
+        console.error("Inicio de sesión fallido. Código de estado:", response.status);
         Swal.fire({
-          title: 'Error',
-          text: 'Inicio de sesión fallido. Verifica tus credenciales.',
-          icon: 'error',
-          confirmButtonText: 'OK',
+          title: "Error",
+          text: "Inicio de sesión fallido. Código de estado: " + response.status,
+          icon: "error",
+          confirmButtonText: "OK",
         });
       }
     } catch (error) {
-      console.error('Error de red:', error);
+      console.error("Error de red:", error);
       // Muestra un mensaje de error en caso de fallo de red
       Swal.fire({
-        title: 'Error',
-        text: 'Error de red. Inténtalo nuevamente.',
-        icon: 'error',
-        confirmButtonText: 'OK',
+        title: "Error",
+        text: "Error de red. Inténtalo nuevamente.",
+        icon: "error",
+        confirmButtonText: "OK",
       });
     }
-  };
+  };  
 
   return (
-    <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '80vh' }}>
+    <Container
+      className="d-flex justify-content-center align-items-center"
+      style={{ minHeight: "80vh" }}
+    >
       <div>
         <h2>Iniciar Sesión</h2>
         <Form onSubmit={handleSubmit}>

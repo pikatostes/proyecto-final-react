@@ -3,7 +3,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-router-dom";
 
 import Home from "../components/Home";
 import About from "../components/About";
@@ -13,7 +14,18 @@ import Login from "../components/Login";
 import Shop from "./Shop";
 import ShoppingCart from "./ShoppingCart";
 
-function CustomNavbar() {
+const CustomNavbar = () => {
+  // Check if a user is logged in
+  const isLoggedIn = sessionStorage.getItem("user") !== null;
+
+  const handleLogout = () => {
+    // Clear user data from sessionStorage
+    sessionStorage.removeItem("user");
+    sessionStorage.removeItem('cart');
+    // Redirect to the main page after logout
+    window.location.href = "";
+  };
+
   return (
     <Router>
       <Navbar expand="lg" className="bg-body-tertiary" sticky="top">
@@ -21,7 +33,7 @@ function CustomNavbar() {
           <Navbar.Brand as={Link} to="proyecto-final-react/">
             <img
               alt=""
-              src="./src/assets/borderlands-logo.svg"
+              src="src/assets/borderlands-logo.svg"
               width="30"
               height="30"
               className="d-inline-block align-top"
@@ -40,17 +52,26 @@ function CustomNavbar() {
               <Nav.Link as={Link} to="proyecto-final-react/shop">
                 Shop
               </Nav.Link>
-              <NavDropdown title="Users" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="proyecto-final-react/login">
-                  Login
-                </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="proyecto-final-react/register">
-                  Register
-                </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="proyecto-final-react/shopping-cart">
-                  Shopping Cart
-                </NavDropdown.Item>
-              </NavDropdown>
+              {isLoggedIn ? (
+                <NavDropdown title="Users" id="basic-nav-dropdown">
+                  <NavDropdown.Item as={Link} to="proyecto-final-react/shopping-cart">
+                    Shopping Cart
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item>
+                    <Button variant="link" onClick={handleLogout}>Logout</Button>
+                  </NavDropdown.Item>
+                </NavDropdown>
+              ) : (
+                <>
+                  <Nav.Link as={Link} to="proyecto-final-react/login">
+                    Login
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="proyecto-final-react/register">
+                    Register
+                  </Nav.Link>
+                </>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -61,11 +82,14 @@ function CustomNavbar() {
         <Route path="proyecto-final-react/login" element={<Login />} />
         <Route path="proyecto-final-react/register" element={<Register />} />
         <Route path="proyecto-final-react/shop" element={<Shop />} />
-        <Route path="proyecto-final-react/shopping-cart" element={<ShoppingCart />} />
+        <Route
+          path="proyecto-final-react/shopping-cart"
+          element={isLoggedIn ? <ShoppingCart /> : <Navigate to="/proyecto-final-react/login" />}
+        />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
   );
-}
+};
 
 export default CustomNavbar;
