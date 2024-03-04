@@ -28,7 +28,7 @@ const CustomNavbar = () => {
     sessionStorage.removeItem("user");
     sessionStorage.removeItem("cart");
     // Redirect to the main page after logout
-    window.location.href = "";
+    window.location.href = "/";
   };
 
   const userData = JSON.parse(sessionStorage.getItem("user"));
