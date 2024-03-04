@@ -39,7 +39,7 @@ function Register() {
         });
       } else {
         // No existe un usuario con el mismo nombre, realizar el registro
-        const registerResponse = await fetch("http://localhost:3001/user", {
+        const registerResponse = await fetch("https://my-json-server.typicode.com/pikatostes/proyecto-final-react/user", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -59,6 +59,12 @@ function Register() {
             window.location.href = "proyecto-final-react/login";
           });
         } else {
+          Swal.fire({
+            title: "Success",
+            text: "Usuario no resgistrado debido a que la base de datos es inalterable.",
+            icon: "success",
+            confirmButtonText: "OK",
+          })
           console.error("Error al registrar usuario.");
         }
       }

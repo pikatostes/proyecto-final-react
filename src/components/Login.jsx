@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 
-function Login() {
+const Login = () => {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -21,10 +21,10 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       const response = await fetch(
-        `http://localhost:3001/user?username=${formData.username}`,
+        `https://my-json-server.typicode.com/pikatostes/proyecto-final-react/user?username=${formData.username}`,
         {
           method: "GET",
           headers: {
@@ -32,25 +32,25 @@ function Login() {
           },
         }
       );
-  
+
       if (response.ok) {
         const users = await response.json();
-  
+
         if (users.length > 0) {
           // User found, proceed with login
           const userData = users[0];
-  
+
           // Store the user data in sessionStorage
           sessionStorage.setItem("user", JSON.stringify(userData));
-  
+
           Swal.fire({
             title: "Success",
             text: "Inicio de sesión exitoso.",
             icon: "success",
             confirmButtonText: "OK",
           }).then(() => {
-            // Redirigir a la página principal
-            window.location.href = "/";
+            // Redirect to the main page
+            window.location.href = "../proyecto-final-react/";
           });
         } else {
           // No user found with the provided username
@@ -64,7 +64,10 @@ function Login() {
         }
       } else {
         // Handle other HTTP status codes
-        console.error("Inicio de sesión fallido. Código de estado:", response.status);
+        console.error(
+          "Inicio de sesión fallido. Código de estado:",
+          response.status
+        );
         Swal.fire({
           title: "Error",
           text: "Inicio de sesión fallido. Código de estado: " + response.status,
@@ -74,7 +77,7 @@ function Login() {
       }
     } catch (error) {
       console.error("Error de red:", error);
-      // Muestra un mensaje de error en caso de fallo de red
+      // Show an error message in case of network failure
       Swal.fire({
         title: "Error",
         text: "Error de red. Inténtalo nuevamente.",
@@ -82,7 +85,7 @@ function Login() {
         confirmButtonText: "OK",
       });
     }
-  };  
+  };
 
   return (
     <Container
@@ -124,6 +127,6 @@ function Login() {
       </div>
     </Container>
   );
-}
+};
 
 export default Login;

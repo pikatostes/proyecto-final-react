@@ -29,6 +29,12 @@
       "name": "Figura",
       "price": 100,
       "image": "src/assets/figura.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Pistola Maliwan",
+      "price": 50000,
+      "image": "src/assets/pistola-maliwan.jpg"
     }
   ]
 }

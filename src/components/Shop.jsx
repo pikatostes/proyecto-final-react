@@ -1,6 +1,5 @@
-// Shop.js
 import React, { useState, useEffect } from "react";
-import ShoppingCart from "./ShoppingCart"; // Make sure to provide the correct path
+import ShoppingCart from "./ShoppingCart";
 import Swal from "sweetalert2";
 
 const Shop = () => {
@@ -15,7 +14,7 @@ const Shop = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/item");
+        const response = await fetch("https://my-json-server.typicode.com/pikatostes/proyecto-final-react/item");
         const data = await response.json();
         setItems(data);
       } catch (error) {
@@ -47,42 +46,59 @@ const Shop = () => {
       return;
     }
 
-    // Update the local state
-    setCart((prevCart) => [...prevCart, item]);
+    // Check if the item is already in the cart
+    const existingItemIndex = cart.findIndex(
+      (cartItem) => cartItem.id === item.id
+    );
 
-    // Update the session storage
-    const updatedCart = [...cart, item];
-    sessionStorage.setItem("cart", JSON.stringify(updatedCart));
+    if (existingItemIndex !== -1) {
+      // Item is already in the cart, update quantity
+      const updatedCart = [...cart];
+      updatedCart[existingItemIndex].quantity += 1;
+      setCart(updatedCart);
+      sessionStorage.setItem("cart", JSON.stringify(updatedCart));
+    } else {
+      // Item is not in the cart, add it with quantity 1
+      const updatedCart = [...cart, { ...item, quantity: 1 }];
+      setCart(updatedCart);
+      sessionStorage.setItem("cart", JSON.stringify(updatedCart));
+    }
   };
 
   return (
     <div className="container mt-5">
-      <h1 className="mb-4">Buenos {username}</h1>
       <div className="row">
-        {items.map((item) => (
-          <div key={item.id} className="col-md-4 mb-4">
-            <div className="card">
-              <img
-                src={item.image}
-                className="card-img-top"
-                alt={item.name}
-                style={{ maxHeight: "300px", objectFit: "contain" }}
-              />
-              <div className="card-body">
-                <h5 className="card-title">{item.name}</h5>
-                <p className="card-text">Price: ${item.price}</p>
-                <button
-                  className="btn btn-primary"
-                  onClick={() => addToCart(item)}
-                >
-                  Add to Cart
-                </button>
+        <div className="col-md-6">
+          <h1 className="mb-4">Buenos {username}</h1>
+          <div className="row">
+            {items.map((item) => (
+              <div key={item.id} className="col-md-4 col-6 mb-4">
+                <div className="card">
+                  <img
+                    src={item.image}
+                    className="card-img-top"
+                    alt={item.name}
+                    style={{ maxHeight: "150px", objectFit: "contain" }}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{item.name}</h5>
+                    <p className="card-text">Price: ${item.price}</p>
+                    <button
+                      className="btn btn-primary"
+                      onClick={() => addToCart(item)}
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
+        <div className="col-md-6">
+          <ShoppingCart cartItems={cart} />
+        </div>
       </div>
-      <ShoppingCart cartItems={cart} />
     </div>
   );
 };
