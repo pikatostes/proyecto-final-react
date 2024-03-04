@@ -16,39 +16,29 @@
       "password": "pepe"
     },
     {
-      "id": "9c68",
-      "username": "pepe",
-      "password": "pepe"
-    },
-    {
-      "id": "e7b8",
-      "username": "alex",
-      "password": "alex"
-    },
-    {
-      "id": "f5b8",
-      "username": "aleas",
-      "password": "alex"
-    },
-    {
-      "id": "74ca",
-      "username": "juanito",
-      "password": "juanito"
-    },
-    {
       "id": "7c4c",
       "username": "juanito",
       "password": "juanito"
+    }
+  ],
+  "item": [
+    {
+      "id": "1",
+      "name": "Camiseta",
+      "price": 20,
+      "image": "src/assets/camiseta-borderlands-fl4k.jpg"
     },
     {
-      "id": "40ad",
-      "username": "alex",
-      "password": "alex"
+      "id": "2",
+      "name": "Máscara",
+      "price": 50,
+      "image": "src/assets/mascara.jpg"
     },
     {
-      "id": "c37d",
-      "username": "asasas",
-      "password": "alex"
+      "id": "3",
+      "name": "Figura",
+      "price": 100,
+      "image": "src/assets/figura.jpg"
     }
   ]
 }

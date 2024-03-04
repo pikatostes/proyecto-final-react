@@ -10,6 +10,8 @@ import About from "../components/About";
 import Register from "../components/Register";
 import Error from "../components/Error";
 import Login from "../components/Login";
+import Shop from "./Shop";
+import ShoppingCart from "./ShoppingCart";
 
 function CustomNavbar() {
   return (
@@ -35,14 +37,19 @@ function CustomNavbar() {
               <Nav.Link as={Link} to="proyecto-final-react/about">
                 About
               </Nav.Link>
-              <Nav.Link as={Link} to="proyecto-final-react/register">
-                Register
+              <Nav.Link as={Link} to="proyecto-final-react/shop">
+                Shop
               </Nav.Link>
               <NavDropdown title="Users" id="basic-nav-dropdown">
                 <NavDropdown.Item as={Link} to="proyecto-final-react/login">
                   Login
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="proyecto-final-react/register">Register</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="proyecto-final-react/register">
+                  Register
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="proyecto-final-react/shopping-cart">
+                  Shopping Cart
+                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
@@ -53,6 +60,8 @@ function CustomNavbar() {
         <Route path="proyecto-final-react/about" element={<About />} />
         <Route path="proyecto-final-react/login" element={<Login />} />
         <Route path="proyecto-final-react/register" element={<Register />} />
+        <Route path="proyecto-final-react/shop" element={<Shop />} />
+        <Route path="proyecto-final-react/shopping-cart" element={<ShoppingCart />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
