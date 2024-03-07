@@ -17,11 +17,11 @@ const App = () => {
     <BrowserRouter>
       <CustomNavbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/shop" element={<Shop />} />
+        <Route path="proyecto-final-react/" element={<Home />} />
+        <Route path="proyecto-final-react/about" element={<About />} />
+        <Route path="proyecto-final-react/login" element={<Login />} />
+        <Route path="proyecto-final-react/register" element={<Register />} />
+        <Route path="proyecto-final-react/shop" element={<Shop />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>

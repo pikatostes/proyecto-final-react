@@ -37,13 +37,13 @@ const CustomNavbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">
+            <Nav.Link as={Link} to="proyecto-final-react//">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="about">
+            <Nav.Link as={Link} to="proyecto-final-react/about">
               About
             </Nav.Link>
-            <Nav.Link as={Link} to="shop">
+            <Nav.Link as={Link} to="proyecto-final-react/shop">
               Shop
             </Nav.Link>
             {isLoggedIn ? (
@@ -56,10 +56,10 @@ const CustomNavbar = () => {
               </NavDropdown>
             ) : (
               <>
-                <Nav.Link as={Link} to="login">
+                <Nav.Link as={Link} to="proyecto-final-react/login">
                   Login
                 </Nav.Link>
-                <Nav.Link as={Link} to="register">
+                <Nav.Link as={Link} to="proyecto-final-react/register">
                   Register
                 </Nav.Link>
               </>

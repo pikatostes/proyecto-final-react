@@ -24,7 +24,7 @@ const Login = () => {
 
     try {
       const response = await fetch(
-        `https://my-json-server.typicode.com/pikatostes//user?username=${formData.username}`,
+        `https://my-json-server.typicode.com/pikatostes/proyecto-final-react/user?username=${formData.username}`,
         {
           method: "GET",
           headers: {
@@ -122,7 +122,7 @@ const Login = () => {
           </Button>
         </Form>
         <p className="mt-3">
-          ¿No tienes una cuenta? <Link to="register">Regístrate aquí</Link>.
+          ¿No tienes una cuenta? <Link to="../proyecto-final-react/register">Regístrate aquí</Link>.
         </p>
       </div>
     </Container>
