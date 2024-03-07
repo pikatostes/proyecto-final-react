@@ -41,7 +41,7 @@ const Shop = () => {
       }).then((result) => {
         if (result.isConfirmed) {
           // Redirect to login page when "OK" is clicked
-          window.location.href = "/proyecto-final-react/login";
+          window.location.href = "login";
         }
       });
       return;

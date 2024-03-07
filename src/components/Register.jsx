@@ -56,7 +56,7 @@ const Register = () => {
             confirmButtonText: "OK",
           }).then(() => {
             // Redirigir a la página principal
-            window.location.href = "proyecto-final-react/login";
+            window.location.href = "login";
           });
         } else {
           Swal.fire({
