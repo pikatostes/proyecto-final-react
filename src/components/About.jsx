@@ -1,9 +1,10 @@
+// About.jsx
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 
-function About() {
+const About = () => {
   return (
-    <Container className="mt-5">
+    <Container className="mt-5 borderlands-theme">
       <h2 className="mb-4">Acerca de la Página de Fans de Borderlands</h2>
       <p>
         ¡Bienvenido a nuestra aplicación dedicada a la saga Borderlands! Somos un grupo de apasionados por estos emocionantes videojuegos y queremos compartir nuestra fascinación contigo.
@@ -16,7 +17,6 @@ function About() {
       </p>
     </Container>
   );
-}
+};
 
 export default About;
-

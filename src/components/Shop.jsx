@@ -1,3 +1,4 @@
+// Shop.jsx
 import React, { useState, useEffect } from "react";
 import ShoppingCart from "./ShoppingCart";
 import Swal from "sweetalert2";
@@ -69,7 +70,7 @@ const Shop = () => {
     <div className="container mt-5">
       <div className="row">
         <div className="col-md-6">
-          <h1 className="mb-4">Buenos {username}</h1>
+          <h1 className="mb-4">Shop</h1>
           <div className="row">
             {items.map((item) => (
               <div key={item.id} className="col-md-4 col-6 mb-4">
@@ -96,7 +97,8 @@ const Shop = () => {
           </div>
         </div>
         <div className="col-md-6">
-          <ShoppingCart cartItems={cart} />
+          {/* Asegúrate de pasar setCart correctamente */}
+          <ShoppingCart cartItems={cart} setCart={setCart} />
         </div>
       </div>
     </div>

@@ -4,12 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Button from "react-bootstrap/Button";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Home from "../components/Home";
 import About from "../components/About";
@@ -17,7 +12,6 @@ import Register from "../components/Register";
 import Error from "../components/Error";
 import Login from "../components/Login";
 import Shop from "./Shop";
-import ShoppingCart from "./ShoppingCart";
 
 const CustomNavbar = () => {
   // Check if a user is logged in
@@ -62,13 +56,6 @@ const CustomNavbar = () => {
               </Nav.Link>
               {isLoggedIn ? (
                 <NavDropdown title={`Hola ${username}`} id="basic-nav-dropdown">
-                  <NavDropdown.Item
-                    as={Link}
-                    to="proyecto-final-react/shopping-cart"
-                  >
-                    Shopping Cart
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
                   <NavDropdown.Item>
                     <Button variant="link" onClick={handleLogout}>
                       Logout
@@ -95,10 +82,6 @@ const CustomNavbar = () => {
         <Route path="proyecto-final-react/login" element={<Login />} />
         <Route path="proyecto-final-react/register" element={<Register />} />
         <Route path="proyecto-final-react/shop" element={<Shop />} />
-        <Route
-          path="proyecto-final-react/shopping-cart"
-          element={<ShoppingCart />}
-        />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
