@@ -1,0 +1,54 @@
+/* Login.css */
+.container {
+     background-color: #121212; /* Fondo oscuro inspirado en Borderlands */
+     color: #ffffff; /* Texto blanco */
+     padding: 20px;
+     border-radius: 10px; /* Bordes redondeados */
+   }
+   
+   h2 {
+     color: #f0cb00; /* Amarillo para el título */
+   }
+   
+   .form-group {
+     margin-bottom: 20px; /* Espaciado inferior entre grupos de formulario */
+   }
+   
+   .form-label {
+     color: #f0cb00; /* Amarillo para las etiquetas del formulario */
+   }
+   
+   .form-control {
+     background-color: #212121; /* Fondo oscuro para los campos de formulario */
+     color: #ffffff; /* Texto blanco en los campos de formulario */
+     border: 2px solid #f0cb00; /* Borde amarillo para los campos de formulario */
+   }
+   
+   .form-control:focus {
+     background-color: #343434; /* Cambio de color al enfocar los campos de formulario */
+   }
+   
+   .btn-primary {
+     background-color: #f0cb00; /* Amarillo para los botones de inicio de sesión */
+     border-color: #f0cb00; /* Color del borde amarillo para los botones de inicio de sesión */
+     color: #000000; /* Texto negro para los botones de inicio de sesión */
+     font-weight: bold; /* Texto en negrita */
+   }
+   
+   .btn-primary:hover {
+     background-color: #e0b000; /* Cambio de color al pasar el ratón por encima del botón */
+     border-color: #e0b000;
+   }
+   
+   .mt-3 {
+     margin-top: 20px; /* Espaciado en la parte superior del enlace de registro */
+   }
+   
+   a {
+     color: #f0cb00; /* Amarillo para el enlace de registro */
+   }
+   
+   a:hover {
+     text-decoration: underline; /* Subrayado al pasar el ratón por encima del enlace de registro */
+   }
+   

@@ -1,0 +1,100 @@
+/* Shop.css */
+.container {
+     background-color: #141414;
+     /* Fondo oscuro inspirado en Borderlands */
+     color: #ffffff;
+     /* Texto blanco */
+     padding: 20px;
+}
+
+h1 {
+     color: #f0cb00;
+     /* Amarillo para el título */
+}
+
+.card {
+     background-color: #212121;
+     /* Fondo oscuro para las tarjetas de productos */
+     color: #ffffff;
+     /* Texto blanco en las tarjetas */
+     border: 2px solid #f0cb00;
+     /* Borde amarillo para las tarjetas */
+     border-radius: 10px;
+     /* Bordes redondeados */
+}
+
+.card:hover {
+     background-color: #343434;
+     /* Cambio de color al pasar el ratón por encima de la tarjeta */
+}
+
+.card-title {
+     font-size: 1.2rem;
+     /* Tamaño de fuente ligeramente más grande para el título de la tarjeta */
+     margin-bottom: 10px;
+}
+
+.card-text {
+     font-size: 0.9rem;
+     /* Tamaño de fuente ligeramente más pequeño para el texto de la tarjeta */
+}
+
+.btn-primary {
+     background-color: #f0cb00;
+     /* Amarillo para los botones de añadir al carrito */
+     border-color: #f0cb00;
+     /* Color del borde amarillo para los botones de añadir al carrito */
+     color: #000000;
+     /* Texto negro para los botones de añadir al carrito */
+     font-weight: bold;
+     /* Texto en negrita */
+}
+
+.btn-primary:hover {
+     background-color: #e0b000;
+     /* Cambio de color al pasar el ratón por encima del botón */
+     border-color: #e0b000;
+}
+
+.shopping-cart-container {
+     background-color: #212121;
+     /* Fondo oscuro para el carrito de compras */
+     padding: 20px;
+     border-radius: 10px;
+     /* Bordes redondeados */
+}
+
+.shopping-cart-title {
+     color: #f0cb00;
+     /* Amarillo para el título del carrito de compras */
+     font-size: 1.5rem;
+     /* Tamaño de fuente más grande para el título del carrito de compras */
+}
+
+.cart-item {
+     border-bottom: 1px solid #343434;
+     /* Borde inferior entre elementos del carrito */
+     padding: 10px 0;
+}
+
+.cart-item:last-child {
+     border-bottom: none;
+     /* Elimina el borde inferior del último elemento del carrito */
+}
+
+.cart-item-name {
+     font-weight: bold;
+     /* Texto en negrita para el nombre del artículo en el carrito */
+}
+
+.cart-item-quantity {
+     margin-left: auto;
+     /* Coloca la cantidad a la derecha del nombre del artículo en el carrito */
+}
+
+.cart-total {
+     margin-top: 20px;
+     /* Espaciado en la parte superior del total del carrito */
+     font-size: 1.2rem;
+     /* Tamaño de fuente ligeramente más grande para el total del carrito */
+}

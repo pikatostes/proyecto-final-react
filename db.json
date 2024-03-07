@@ -41,5 +41,127 @@
       "price": 50000,
       "image": "src/assets/pistola-maliwan.jpg"
     }
+  ],
+  "character": [
+    {
+      "id": 1,
+      "name": "Roland",
+      "image": "src/assets/roland.gif",
+      "background": "src/assets/roland-background.webp",
+      "description": "Soldado con habilidades de apoyo y liderazgo.",
+      "skills": "Acción de torreta: Despliega una torreta automática que dispara a enemigos cercanos.",
+      "skilltree": "src/assets/skilltree/roland-skilltree.jpg",
+      "game": "BL1"
+    },
+    {
+      "id": 2,
+      "name": "Lilith",
+      "image": "src/assets/lilith.gif",
+      "background": "src/assets/lilith-background.webp",
+      "description": "Sirena con habilidades de fase y control elemental.",
+      "skills": "Fase: Se vuelve invisible y aumenta la velocidad de movimiento.",
+      "skilltree": "src/assets/skilltree/lilith-skilltree.webp",
+      "game": "BL1"
+    },
+    {
+      "id": 3,
+      "name": "Mordecai",
+      "image": "src/assets/mordecai.gif",
+      "background": "src/assets/mordecai-background.webp",
+      "description": "Cazador con habilidades de francotirador y aves rapaces.",
+      "skills": "Bloodwing: Lanza a su ave rapaz para atacar a enemigos y regresa con botín.",
+      "skilltree": "src/assets/skilltree/mordecai-skilltree.jpg",
+      "game": "BL1"
+    },
+    {
+      "id": 4,
+      "name": "Brick",
+      "image": "src/assets/brick.gif",
+      "background": "src/assets/brick-background.webp",
+      "description": "Berserker con habilidades de combate cuerpo a cuerpo y fuerza bruta.",
+      "skills": "Furia: Entra en un estado de furia aumentando su daño cuerpo a cuerpo.",
+      "skilltree": "src/assets/skilltree/brick-skilltree.jpg",
+      "game": "BL1"
+    },
+    {
+      "id": 5,
+      "name": "Axton",
+      "image": "src/assets/axton.gif",
+      "background": "src/assets/axton-background.jpg",
+      "description": "Commando con habilidades de torreta.",
+      "skills": "Acción de torreta: Despliega una torreta que dispara a enemigos y proporciona apoyo.",
+      "skilltree": "src/assets/skilltree/axton-skilltree.jfif",
+      "game": "BL2"
+    },
+    {
+      "id": 6,
+      "name": "Maya",
+      "image": "src/assets/maya.gif",
+      "background": "src/assets/maya-background.jpg",
+      "description": "Sirena con habilidad de Phaselock.",
+      "skills": "Phaselock: Captura a un enemigo en una esfera de energía, inmovilizándolo.",
+      "skilltree": "src/assets/skilltree/maya-skilltree.jpg",
+      "game": "BL2"
+    },
+    {
+      "id": 7,
+      "name": "Zer0",
+      "image": "src/assets/zero.gif",
+      "background": "src/assets/zero-background.webp",
+      "description": "Asesino con habilidad de holograma.",
+      "skills": "Decepción: Despliega un holograma para confundir a los enemigos y obtener ventaja.",
+      "skilltree": "src/assets/skilltree/zero-skilltree.png",
+      "game": "BL2"
+    },
+    {
+      "id": 8,
+      "name": "Salvador",
+      "image": "src/assets/salvador.gif",
+      "background": "src/assets/salvador-background.jfif",
+      "description": "Gunzerker con habilidad de empuñar dos armas.",
+      "skills": "Gunzerking: Empuña dos armas simultáneamente durante un tiempo limitado.",
+      "skilltree": "src/assets/skilltree/salvador-skilltree.jpg",
+      "game": "BL2"
+    },
+    {
+      "id": 9,
+      "name": "Amara",
+      "image": "src/assets/amara.gif",
+      "background": "src/assets/amara-background.webp",
+      "description": "Sirena con habilidades de puños y control elemental.",
+      "skills": "Faseslam, Fasecast, Fasegrasp: Habilidades que permiten controlar y dañar a los enemigos.",
+      "skilltree": "src/assets/skilltree/amara-skilltree.png",
+      "game": "BL3"
+    },
+    {
+      "id": 10,
+      "name": "FL4K",
+      "image": "src/assets/fl4k.gif",
+      "background": "src/assets/fl4k-background.webp",
+      "description": "Domabestias con habilidades de invocar criaturas y rastrear presas.",
+      "skills": "Gama de habilidades de Beastmaster para invocar criaturas y mejorar habilidades de caza.",
+      "skilltree": "src/assets/skilltree/fl4k-skilltree.png",
+      "game": "BL3"
+    },
+    {
+      "id": 11,
+      "name": "Moze",
+      "image": "src/assets/moze.gif",
+      "background": "src/assets/moze-background.webp",
+      "description": "Soldado con habilidades de mech y explosivos.",
+      "skills": "Iron Bear: Pilotea un mech armado con diversas opciones de armas y habilidades.",
+      "skilltree": "src/assets/skilltree/moze-skilltree.png",
+      "game": "BL3"
+    },
+    {
+      "id": 12,
+      "name": "Zane",
+      "image": "src/assets/zane.gif",
+      "background": "src/assets/zane-background.webp",
+      "description": "Agente con habilidades de clonación y barreras.",
+      "skills": "SNTNL, Digi-Clone, Barrier: Habilidades que permiten invocar drones, clones y barreras para combate.",
+      "skilltree": "src/assets/skilltree/zane-skilltree.png",
+      "game": "BL3"
+    }
   ]
 }

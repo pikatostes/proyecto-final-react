@@ -1,42 +1,45 @@
 /* App.css */
-
 body {
+  background-color: #121212;
+  /* Fondo oscuro para el cuerpo de la aplicación */
+  color: #ffffff;
+  /* Texto blanco por defecto */
   font-family: "Arial", sans-serif;
-  background-color: #f8f9fa;
-  color: #343a40;
+  /* Fuente similar a la utilizada en Borderlands */
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.header {
-  background-color: #007bff;
-  color: #ffffff;
-  padding: 10px;
-  text-align: center;
-}
-
-.navbar {
-  background-color: #343a40;
-  color: #ffffff;
-}
-
-/*
-.nav-link {
-  color: #ffffff !important;
-}
-*/
-
-.nav-link:hover {
-  color: #17a2b8 !important;
-}
-
-.card {
+.routes-container {
   margin-top: 20px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Espaciado en la parte superior de las rutas */
+}
+
+.error-message {
+  color: #ff5555;
+  /* Color rojo para mensajes de error */
+}
+
+/* Estilos para el botón de enlace */
+.link-button {
+  background-color: #ffcc00;
+  /* Color de fondo amarillo para los botones de enlace */
+  border-color: #ffcc00;
+  /* Color del borde amarillo para los botones de enlace */
+  color: #000000;
+  /* Texto negro para los botones de enlace */
+  text-decoration: none;
+  /* Elimina el subrayado del texto del botón de enlace */
+  padding: 8px 16px;
+  /* Ajusta el padding del botón */
+  display: inline-block;
+  /* Mantiene el botón en línea con el texto */
+  font-weight: bold;
+  /* Texto en negrita */
+  transition: background-color 0.3s ease;
+  /* Transición suave del color de fondo al pasar el ratón */
+}
+
+.link-button:hover {
+  background-color: #ff9900;
+  /* Cambio de color al pasar el ratón por encima del botón de enlace */
+  border-color: #ff9900;
 }

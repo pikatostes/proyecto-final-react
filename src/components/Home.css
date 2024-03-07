@@ -1,0 +1,30 @@
+/* Home.css */
+.borderlands-theme {
+     background-color: #2a2a2a;
+     /* Fondo oscuro inspirado en Borderlands */
+     color: #ffffff;
+     /* Texto blanco */
+}
+
+.borderlands-image {
+     border: 4px solid #ffcc00;
+     /* Borde amarillo para la imagen */
+}
+
+.borderlands-text {
+     font-family: "Arial", sans-serif;
+     /* Fuente similar a la utilizada en Borderlands */
+}
+
+.borderlands-button {
+     background-color: #ffcc00;
+     /* Color de fondo amarillo para los botones */
+     border-color: #ffcc00;
+     /* Color del borde amarillo para los botones */
+}
+
+.borderlands-button:hover {
+     background-color: #ff9900;
+     /* Cambio de color al pasar el ratón por encima */
+     border-color: #ff9900;
+}

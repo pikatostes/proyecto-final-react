@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import "./Login.css"; // Importa el archivo de estilos personalizados
 
 const Login = () => {
   const [formData, setFormData] = useState({

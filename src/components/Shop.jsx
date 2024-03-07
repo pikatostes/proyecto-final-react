@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import ShoppingCart from "./ShoppingCart";
 import Swal from "sweetalert2";
+import "./Shop.css"; // Importa el archivo de estilos personalizados
 
 const Shop = () => {
   const [items, setItems] = useState([]);

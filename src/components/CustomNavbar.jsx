@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import "./CustomNavbar.css"; // Importa el archivo de estilos personalizados
 
 const CustomNavbar = () => {
   // Check if a user is logged in
@@ -45,6 +46,10 @@ const CustomNavbar = () => {
             </Nav.Link>
             <Nav.Link as={Link} to="proyecto-final-react/shop">
               Shop
+            </Nav.Link>
+            {/* Agrega el enlace al componente Characters */}
+            <Nav.Link as={Link} to="proyecto-final-react/characters">
+              Characters
             </Nav.Link>
             {isLoggedIn ? (
               <NavDropdown title={`Hola ${username}`} id="basic-nav-dropdown">

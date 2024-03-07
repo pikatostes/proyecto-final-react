@@ -1,6 +1,7 @@
 // ShoppingCart.jsx
 import React, { useState, useEffect } from "react";
 import Table from "react-bootstrap/Table";
+import "./ShoppingCart.css"; // Importa el archivo de estilos personalizados
 
 const ShoppingCart = ({ cartItems, setCart }) => {
   const [localCartItems, setLocalCartItems] = useState(cartItems || []);

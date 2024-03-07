@@ -6,8 +6,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import "./Home.css"; // Importa el archivo de estilos personalizados
 
-const Home = ({ }) => {
+const Home = () => {
   const isLoggedIn = sessionStorage.getItem("user") !== null;
 
   return (
@@ -21,7 +22,7 @@ const Home = ({ }) => {
             className="img-fluid rounded borderlands-image"
           />
         </Col>
-        <Col md={6}>
+        <Col md={6} className="borderlands-text">
           <p className="mt-4">
             ¡Explora el emocionante mundo de Borderlands lleno de acción y caos!
             Descubre personajes únicos, obtén armas asombrosas y enfréntate a
@@ -49,3 +50,4 @@ const Home = ({ }) => {
 };
 
 export default Home;
+

@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Swal from "sweetalert2";
+import "./Register.css"; // Importa el archivo de estilos personalizados
 
 const Register = () => {
   const [formData, setFormData] = useState({

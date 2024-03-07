@@ -1,0 +1,31 @@
+/* CustomNavbar.css */
+.custom-navbar {
+     background-color: #2a2a2a;
+     /* Fondo oscuro inspirado en Borderlands */
+}
+
+.navbar-brand {
+     color: #ffcc00 !important;
+     /* Color amarillo para el texto del logo */
+     font-weight: bold;
+}
+
+.navbar-toggler-icon {
+     background-color: #ffffff;
+     /* Color blanco para el icono del botón de navegación */
+}
+
+.navbar-toggler {
+     border-color: #ffffff;
+     /* Color blanco para el borde del botón de navegación */
+}
+
+.navbar-toggler:focus {
+     outline: none;
+     /* Eliminar el contorno al hacer foco en el botón de navegación */
+}
+
+.navbar-toggler:hover {
+     background-color: #ffcc00;
+     /* Cambio de color al pasar el ratón por encima */
+}
