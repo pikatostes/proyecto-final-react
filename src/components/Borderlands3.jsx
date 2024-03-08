@@ -57,7 +57,7 @@ const Borderlands3 = () => {
   useEffect(() => {
     const fetchCharacters = async () => {
       try {
-        const response = await fetch("http://localhost:3001/character");
+        const response = await fetch("https://my-json-server.typicode.com/pikatostes/proyecto-final-react/character");
         const data = await response.json();
 
         // Filtra los personajes que tienen el atributo game con valor "BL3"
