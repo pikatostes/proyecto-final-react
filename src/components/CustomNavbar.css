@@ -1,6 +1,6 @@
 /* CustomNavbar.css */
 .custom-navbar {
-     background-color: #2a2a2a;
+     background-color: #121212;
      /* Fondo oscuro inspirado en Borderlands */
      transition: padding 0.3s; /* Agrega una transición suave al cambiar el padding */
 }
@@ -13,9 +13,10 @@
 
 .navbar-toggler-icon,
 .navbar-toggler {
-     background-color: #ffffff;
+     background-color: #121212;
      /* Color blanco para el icono del botón de navegación y el borde del botón de navegación */
-     border-color: #ffffff;
+     border-color: #121212;
+     color: yellow !important;
 }
 
 .navbar-toggler:focus {
@@ -24,7 +25,7 @@
 }
 
 .navbar-toggler:hover {
-     background-color: #ffcc00;
+     background-color: #121212;
      /* Cambio de color al pasar el ratón por encima */
 }
 
