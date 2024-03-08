@@ -51,6 +51,9 @@ const CustomNavbar = () => {
             <Nav.Link as={Link} to="proyecto-final-react/characters">
               Characters
             </Nav.Link>
+            <Nav.Link as={Link} to="proyecto-final-react/games">
+              Games
+            </Nav.Link>
             {isLoggedIn ? (
               <NavDropdown title={`Hola ${username}`} id="basic-nav-dropdown">
                 <NavDropdown.Item>

@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Swal from "sweetalert2";
 import "./Register.css"; // Importa el archivo de estilos personalizados
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -81,11 +82,6 @@ const Register = () => {
     >
       <div>
         <h2>Alta de Usuario</h2>
-        <p>
-          Completa el formulario a continuación para registrarte y unirte a
-          nuestra comunidad de jugadores de Borderlands.
-        </p>
-
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="formUsername">
             <Form.Label>Nombre de usuario</Form.Label>
@@ -113,6 +109,9 @@ const Register = () => {
             Registrarse
           </Button>
         </Form>
+        <p className="mt-3">
+          ¿Ya tienes cuenta? <Link to="../proyecto-final-react/login">Inicia sesión aquí</Link>.
+        </p>
       </div>
     </Container>
   );
