@@ -1,47 +1,46 @@
 /* ShoppingCart.css */
 .container {
-     background-color: #121212; /* Fondo oscuro inspirado en Borderlands */
-     color: #ffffff; /* Texto blanco */
-     padding: 20px;
-     border-radius: 10px; /* Bordes redondeados */
-   }
-   
-   h2 {
-     color: #f0cb00; /* Amarillo para el título */
-   }
-   
-   p {
-     color: #ffffff; /* Texto blanco para los párrafos */
-     margin-bottom: 20px; /* Espaciado inferior entre párrafos */
-   }
-   
-   .table {
-     background-color: #212121; /* Fondo oscuro para la tabla de carrito de compras */
-     color: #ffffff; /* Texto blanco en la tabla de carrito de compras */
-   }
-   
-   .table th,
-   .table td {
-     border-color: #f0cb00; /* Borde amarillo para las celdas de la tabla de carrito de compras */
-   }
-   
-   .table th {
-     background-color: #343434; /* Fondo más oscuro para las celdas de encabezado de la tabla */
-   }
-   
-   .table-hover tbody tr:hover {
-     background-color: #343434; /* Cambio de color al pasar el ratón por encima de las filas de la tabla */
-   }
-   
-   .btn-danger {
-     background-color: #ff5050; /* Rojo para los botones de eliminación en el carrito de compras */
-     border-color: #ff5050; /* Color del borde rojo para los botones de eliminación en el carrito de compras */
-     color: #ffffff; /* Texto blanco para los botones de eliminación en el carrito de compras */
-     font-weight: bold; /* Texto en negrita */
-   }
-   
-   .btn-danger:hover {
-     background-color: #ff3333; /* Cambio de color al pasar el ratón por encima del botón de eliminación */
-     border-color: #ff3333;
-   }
-   
+  background-color: #121212; /* Fondo oscuro inspirado en Borderlands */
+  color: #ffffff; /* Texto blanco */
+  padding: 20px;
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+h2 {
+  color: #f0cb00; /* Amarillo para el título */
+}
+
+p {
+  color: #ffffff; /* Texto blanco para los párrafos */
+  margin-bottom: 20px; /* Espaciado inferior entre párrafos */
+}
+
+.table {
+  background-color: #212121; /* Fondo oscuro para la tabla de carrito de compras */
+  color: #ffffff; /* Texto blanco en la tabla de carrito de compras */
+}
+
+.table th,
+.table td {
+  border-color: #f0cb00; /* Borde amarillo para las celdas de la tabla de carrito de compras */
+}
+
+.table th {
+  background-color: #343434; /* Fondo más oscuro para las celdas de encabezado de la tabla */
+}
+
+.table-hover tbody tr:hover {
+  background-color: #343434; /* Cambio de color al pasar el ratón por encima de las filas de la tabla */
+}
+
+.btn-danger {
+  background-color: #ff5050; /* Rojo para los botones de eliminación en el carrito de compras */
+  border-color: #ff5050; /* Color del borde rojo para los botones de eliminación en el carrito de compras */
+  color: #ffffff; /* Texto blanco para los botones de eliminación en el carrito de compras */
+  font-weight: bold; /* Texto en negrita */
+}
+
+.btn-danger:hover {
+  background-color: #ff3333; /* Cambio de color al pasar el ratón por encima del botón de eliminación */
+  border-color: #ff3333;
+}

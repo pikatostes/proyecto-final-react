@@ -23,9 +23,9 @@ const CustomNavbar = () => {
   const username = userData ? userData.username : "";
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary" sticky="top">
+    <Navbar expand="lg" className="" sticky="top">
       <Container>
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand as={Link} to="proyecto-final-react/">
           <img
             alt=""
             src="src/assets/borderlands-logo.svg"

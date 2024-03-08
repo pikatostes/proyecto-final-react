@@ -2,22 +2,20 @@
 .custom-navbar {
      background-color: #2a2a2a;
      /* Fondo oscuro inspirado en Borderlands */
+     transition: padding 0.3s; /* Agrega una transición suave al cambiar el padding */
 }
 
 .navbar-brand {
-     color: #ffcc00 !important;
-     /* Color amarillo para el texto del logo */
+     color: yellow !important;
+     /* Color blanco para el texto del logo */
      font-weight: bold;
 }
 
-.navbar-toggler-icon {
-     background-color: #ffffff;
-     /* Color blanco para el icono del botón de navegación */
-}
-
+.navbar-toggler-icon,
 .navbar-toggler {
+     background-color: #ffffff;
+     /* Color blanco para el icono del botón de navegación y el borde del botón de navegación */
      border-color: #ffffff;
-     /* Color blanco para el borde del botón de navegación */
 }
 
 .navbar-toggler:focus {
@@ -28,4 +26,21 @@
 .navbar-toggler:hover {
      background-color: #ffcc00;
      /* Cambio de color al pasar el ratón por encima */
+}
+
+/* Estilo para los enlaces en la barra de navegación */
+.navbar-nav .nav-link {
+     color: #ffffff !important;
+     text-decoration: none;
+     transition: color 0.3s, transform 0.3s; /* Transición suave para color y transform */
+}
+
+/* Efecto hover para los enlaces en la barra de navegación */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.dropdown-item:hover,
+.navbar-nav .nav-link.dropdown-item:focus,
+.navbar-nav .nav-item.active .nav-link {
+     color: #ffcc00 !important;
+     transform: scale(1.1); /* Aumentar el tamaño al pasar el ratón */
 }
