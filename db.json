@@ -46,7 +46,7 @@
     {
       "id": 1,
       "name": "Roland",
-      "image": "src/assets/roland.gif",
+      "image": "src/assets/icon/roland.gif",
       "background": "src/assets/background/roland-background.webp",
       "description": "Soldado con habilidades de apoyo y liderazgo.",
       "skills": "Acción de torreta: Despliega una torreta automática que dispara a enemigos cercanos.",
@@ -56,7 +56,7 @@
     {
       "id": 2,
       "name": "Lilith",
-      "image": "src/assets/lilith.gif",
+      "image": "src/assets/icon/lilith.gif",
       "background": "src/assets/background/lilith-background.webp",
       "description": "Sirena con habilidades de fase y control elemental.",
       "skills": "Fase: Se vuelve invisible y aumenta la velocidad de movimiento.",
@@ -66,7 +66,7 @@
     {
       "id": 3,
       "name": "Mordecai",
-      "image": "src/assets/mordecai.gif",
+      "image": "src/assets/icon/mordecai.gif",
       "background": "src/assets/background/mordecai-background.webp",
       "description": "Cazador con habilidades de francotirador y aves rapaces.",
       "skills": "Bloodwing: Lanza a su ave rapaz para atacar a enemigos y regresa con botín.",
@@ -76,7 +76,7 @@
     {
       "id": 4,
       "name": "Brick",
-      "image": "src/assets/brick.gif",
+      "image": "src/assets/icon/brick.gif",
       "background": "src/assets/background/brick-background.webp",
       "description": "Berserker con habilidades de combate cuerpo a cuerpo y fuerza bruta.",
       "skills": "Furia: Entra en un estado de furia aumentando su daño cuerpo a cuerpo.",
@@ -86,7 +86,7 @@
     {
       "id": 5,
       "name": "Axton",
-      "image": "src/assets/axton.gif",
+      "image": "src/assets/icon/axton.gif",
       "background": "src/assets/background/axton-background.jpg",
       "description": "Commando con habilidades de torreta.",
       "skills": "Acción de torreta: Despliega una torreta que dispara a enemigos y proporciona apoyo.",
@@ -96,7 +96,7 @@
     {
       "id": 6,
       "name": "Maya",
-      "image": "src/assets/maya.gif",
+      "image": "src/assets/icon/maya.gif",
       "background": "src/assets/background/maya-background.jpg",
       "description": "Sirena con habilidad de Phaselock.",
       "skills": "Phaselock: Captura a un enemigo en una esfera de energía, inmovilizándolo.",

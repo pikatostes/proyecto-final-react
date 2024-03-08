@@ -10,7 +10,7 @@ const CharacterInfo = () => {
   useEffect(() => {
     const fetchCharacterInfo = async () => {
       try {
-        const response = await fetch(`https://my-json-server.typicode.com/pikatostes/proyecto-final-react/character/${characterId}`);
+        const response = await fetch(`http://localhost:3001/character/${characterId}`);
         const data = await response.json();
         setCharacterInfo(data);
       } catch (error) {
