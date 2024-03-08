@@ -11,7 +11,7 @@ const Characters = () => {
   useEffect(() => {
     const fetchCharacters = async () => {
       try {
-        const response = await fetch("http://localhost:3001/character");
+        const response = await fetch("https://my-json-server.typicode.com/pikatostes/proyecto-final-react/character");
         const data = await response.json();
         setCharactersData(data);
       } catch (error) {
