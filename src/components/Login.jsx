@@ -51,7 +51,7 @@ const Login = () => {
             confirmButtonText: "OK",
           }).then(() => {
             // Redirect to the main page
-            window.location.href = "/";
+            window.location.href = "proyecto-final-react/";
           });
         } else {
           // No user found with the provided username

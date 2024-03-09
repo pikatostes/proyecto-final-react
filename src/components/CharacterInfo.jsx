@@ -39,7 +39,7 @@ const CharacterInfo = () => {
 
   return (
     <Container className="mt-4" style={containerStyle}>
-      <Card className="d-flex flex-row" style={{ backgroundColor: "rgba(255, 255, 255, 0.8)" }}>
+      <Card className="d-flex flex-row" style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}>
         <div>
           <Card.Img
             src={`../${characterInfo.image}`}
