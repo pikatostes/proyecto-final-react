@@ -11,8 +11,6 @@ import Error from "./components/Error";
 import Characters from "./components/Characters";
 import CharacterInfo from "./components/CharacterInfo";
 import Games from "./components/Games";
-import Borderlands1 from "./components/Borderlands1"; // Importa el componente Borderlands1
-import Borderlands2 from "./components/Borderlands2"; // Importa el componente Borderlands2
 import "./App.css"; // Importa el archivo de estilos personalizados
 
 const App = () => {
@@ -30,8 +28,6 @@ const App = () => {
         <Route path="/characters" element={<Characters />} />
         <Route path="/characterinfo/:characterId" element={<CharacterInfo />} />
         <Route path="/games" element={<Games />} />
-        <Route path="/games/borderlands1" element={<Borderlands1 />} />
-        <Route path="/games/borderlands2" element={<Borderlands2 />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
