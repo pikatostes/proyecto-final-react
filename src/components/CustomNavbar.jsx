@@ -25,7 +25,7 @@ const CustomNavbar = () => {
   return (
     <Navbar expand="lg" className="" sticky="top">
       <Container>
-        <Navbar.Brand as={Link} to="proyecto-final-react/">
+        <Navbar.Brand as={Link} to="/">
           <img
             alt=""
             src="src/assets/borderlands-logo.svg"
@@ -38,20 +38,20 @@ const CustomNavbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="proyecto-final-react//">
+            <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="proyecto-final-react/about">
+            <Nav.Link as={Link} to="/about">
               About
             </Nav.Link>
-            <Nav.Link as={Link} to="proyecto-final-react/shop">
+            <Nav.Link as={Link} to="/shop">
               Shop
             </Nav.Link>
-            {/* Agrega el enlace al componente Characters */}
-            <Nav.Link as={Link} to="proyecto-final-react/characters">
+            {/* Ajusta el enlace al componente Characters */}
+            <Nav.Link as={Link} to="/characters">
               Characters
             </Nav.Link>
-            <Nav.Link as={Link} to="proyecto-final-react/games">
+            <Nav.Link as={Link} to="/games">
               Games
             </Nav.Link>
             {isLoggedIn ? (
@@ -64,10 +64,10 @@ const CustomNavbar = () => {
               </NavDropdown>
             ) : (
               <>
-                <Nav.Link as={Link} to="proyecto-final-react/login">
+                <Nav.Link as={Link} to="/login">
                   Login
                 </Nav.Link>
-                <Nav.Link as={Link} to="proyecto-final-react/register">
+                <Nav.Link as={Link} to="/register">
                   Register
                 </Nav.Link>
               </>

@@ -19,19 +19,19 @@ const App = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/proyecto-final-react">
       <CustomNavbar />
       <Routes>
-        <Route path="proyecto-final-react/" element={<Home />} />
-        <Route path="proyecto-final-react/about" element={<About />} />
-        <Route path="proyecto-final-react/login" element={<Login />} />
-        <Route path="proyecto-final-react/register" element={<Register />} />
-        <Route path="proyecto-final-react/shop" element={<Shop />} />
-        <Route path="proyecto-final-react/characters" element={<Characters />} />
-        <Route path="proyecto-final-react/characterinfo/:characterId" element={<CharacterInfo />} />
-        <Route path="proyecto-final-react/games" element={<Games />} />
-        <Route path="proyecto-final-react/games/borderlands1" element={<Borderlands1 />} /> {/* Nueva ruta para Borderlands1 */}
-        <Route path="proyecto-final-react/games/borderlands2" element={<Borderlands2 />} /> {/* Nueva ruta para Borderlands2 */}
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/characters" element={<Characters />} />
+        <Route path="/characterinfo/:characterId" element={<CharacterInfo />} />
+        <Route path="/games" element={<Games />} />
+        <Route path="/games/borderlands1" element={<Borderlands1 />} />
+        <Route path="/games/borderlands2" element={<Borderlands2 />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
