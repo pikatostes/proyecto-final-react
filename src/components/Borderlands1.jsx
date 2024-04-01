@@ -26,7 +26,7 @@ const CharacterList = ({ characters }) => {
       <Row xs={1} md={2} lg={4} className="g-4">
         {characters.map((character) => (
           <Col key={character.id}>
-            <Link to={`../proyecto-final-react/characterinfo/${character.id}`}>
+            <Link to={`/characterinfo/${character.id}`}>
               <Card>
                 <div className="ratio ratio-4x3">
                   <Card.Img
